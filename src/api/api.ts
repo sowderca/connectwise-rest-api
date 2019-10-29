@@ -42676,7 +42676,7 @@ export interface WorkflowTriggerOption {
 
             return fetch(localVarPathWithQueryParameters, fetchParams).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
-                    return response.json();
+                    return response.buffer();
                 } else {
                     let error = new Error(response.statusText);
                     (error as any).response = response;
